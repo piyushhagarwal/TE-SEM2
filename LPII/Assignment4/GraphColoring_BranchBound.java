@@ -77,6 +77,7 @@ class Graph {
         return false;
     }
 
+    // Main function to perform graph coloring with the given number of colors.
     public void graphColoring(int noOfColors) {
         int[] resultColor = new int[vertices];
 
