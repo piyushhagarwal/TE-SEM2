@@ -41,8 +41,8 @@ import java.util.Queue;
 // The loop continues until all possible oranges are rotten, and the time required is tracked.
 // Finally, the algorithm returns the minimum time required. If there are remaining fresh oranges after the BFS loop, it returns -1, indicating that not all oranges can become rotten.
 
-class Solution {
-    public int orangesRotting(int[][] grid) {
+public class BFS {
+    public static int orangesRotting(int[][] grid) {
         int m = grid.length;
         int n = grid[0].length;
 
@@ -126,4 +126,13 @@ class Solution {
 
         return ans;
     }
+
+    public static void main(String[] args) {
+        int[][] grid = { { 2, 1, 1 }, { 1, 1, 0 }, { 0, 1, 1 } };
+        System.out.println(orangesRotting(grid)); // Output: 4
+
+        int[][] grid2 = { { 2, 1, 1 }, { 0, 1, 1 }, { 1, 0, 1 } };
+        System.out.println(orangesRotting(grid2)); // Output: -1
+    }
+
 }

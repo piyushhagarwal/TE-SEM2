@@ -19,9 +19,9 @@
 
 package Assignment1;
 
-class Solution {
+public class DFS {
     // Function to find the number of connected components using DFS
-    public int findCircleNum(int[][] isConnected) {
+    public static int findCircleNum(int[][] isConnected) {
         int n = isConnected.length;
         int[] visited = new int[n]; // Array to track visited vertices
         int count = 0; // Counter for the number of connected components
@@ -38,7 +38,7 @@ class Solution {
     }
 
     // DFS function to traverse the graph and mark connected components
-    public void dfs(int i, int[] visited, int[][] isConnected) {
+    public static void dfs(int i, int[] visited, int[][] isConnected) {
         visited[i] = 1; // Mark the current vertex as visited
 
         // Iterate through neighbors of the current vertex
@@ -50,4 +50,15 @@ class Solution {
             }
         }
     }
+
+    public static void main(String[] args) {
+        // Test cases
+        int[][] isConnected1 = { { 1, 1, 0 }, { 1, 1, 0 }, { 0, 0, 1 } };
+        int[][] isConnected2 = { { 1, 0, 0 }, { 0, 1, 0 }, { 0, 0, 1 } };
+
+        // Find the number of provinces
+        System.out.println("Number of provinces in isConnected1: " + findCircleNum(isConnected1));
+        System.out.println("Number of provinces in isConnected2: " + findCircleNum(isConnected2));
+    }
+
 }
