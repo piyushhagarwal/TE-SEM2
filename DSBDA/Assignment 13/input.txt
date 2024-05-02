@@ -1,0 +1,3 @@
+Assignment 13
+Write Scala application using Spark.
+Apache Spark
